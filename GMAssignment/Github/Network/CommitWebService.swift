@@ -16,7 +16,7 @@ class CommitWebService {
         self.urlString = urlString
         self.urlSession = urlSession
     }
-
+    
     func fetchListOfCommits(onCompition: @escaping (Result<[CommitList], APIError>) -> Void) {
         guard let url = URL(string: urlString) else {
             onCompition(.failure(.urlError))
@@ -47,7 +47,7 @@ class CommitWebService {
             }
         }
         task.resume()
-
+        
     }
 }
 

@@ -14,7 +14,7 @@ enum APIError: LocalizedError, Equatable {
     case failedRequest(description: String)
     case networkConnecetionEror
     
-    var errorDescription: String? {
+    var errorDescription: String {
         switch self {
         case .failedRequest(let description):
             return description

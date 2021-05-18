@@ -19,6 +19,8 @@
 		846717A32653754100CD66C1 /* GithubCommits.json in Resources */ = {isa = PBXBuildFile; fileRef = 846717A22653754100CD66C1 /* GithubCommits.json */; };
 		846717AE2653841C00CD66C1 /* CommitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717AD2653841C00CD66C1 /* CommitModel.swift */; };
 		846717B92653845E00CD66C1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717B82653845E00CD66C1 /* APIError.swift */; };
+		846717BF2654222F00CD66C1 /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717BE2654222E00CD66C1 /* CommitViewModel.swift */; };
+		846717C9265432BE00CD66C1 /* CommitViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717C8265432BE00CD66C1 /* CommitViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		846717A22653754100CD66C1 /* GithubCommits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GithubCommits.json; sourceTree = "<group>"; };
 		846717AD2653841C00CD66C1 /* CommitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitModel.swift; sourceTree = "<group>"; };
 		846717B82653845E00CD66C1 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		846717BE2654222E00CD66C1 /* CommitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitViewModel.swift; sourceTree = "<group>"; };
+		846717C8265432BE00CD66C1 /* CommitViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +125,7 @@
 		8467175F2653618300CD66C1 /* GMAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				846717AA265383B300CD66C1 /* Json */,
-				846717992653741E00CD66C1 /* Mocks */,
-				846717902653739100CD66C1 /* Network */,
+				846717C62654327700CD66C1 /* GithubTest */,
 				846717622653618300CD66C1 /* Info.plist */,
 			);
 			path = GMAssignmentTests;
@@ -141,6 +143,8 @@
 		846717822653685A00CD66C1 /* Github */ = {
 			isa = PBXGroup;
 			children = (
+				846717D42654516300CD66C1 /* New Group */,
+				846717BD2654220A00CD66C1 /* ViewModel */,
 				846717AC265383F300CD66C1 /* Models */,
 				8467178F2653735D00CD66C1 /* Network */,
 			);
@@ -186,6 +190,40 @@
 				846717B82653845E00CD66C1 /* APIError.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		846717BD2654220A00CD66C1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				846717BE2654222E00CD66C1 /* CommitViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		846717C62654327700CD66C1 /* GithubTest */ = {
+			isa = PBXGroup;
+			children = (
+				846717C72654329900CD66C1 /* ViewModelTest */,
+				846717902653739100CD66C1 /* Network */,
+				846717992653741E00CD66C1 /* Mocks */,
+				846717AA265383B300CD66C1 /* Json */,
+			);
+			path = GithubTest;
+			sourceTree = "<group>";
+		};
+		846717C72654329900CD66C1 /* ViewModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				846717C8265432BE00CD66C1 /* CommitViewModelTest.swift */,
+			);
+			path = ViewModelTest;
+			sourceTree = "<group>";
+		};
+		846717D42654516300CD66C1 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +361,7 @@
 				8467174A2653618000CD66C1 /* AppDelegate.swift in Sources */,
 				846717AE2653841C00CD66C1 /* CommitModel.swift in Sources */,
 				8467174C2653618000CD66C1 /* SceneDelegate.swift in Sources */,
+				846717BF2654222F00CD66C1 /* CommitViewModel.swift in Sources */,
 				846717B92653845E00CD66C1 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8467179B2653743700CD66C1 /* MockURLProtocol.swift in Sources */,
+				846717C9265432BE00CD66C1 /* CommitViewModelTest.swift in Sources */,
 				84671792265373BA00CD66C1 /* CommitWebServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

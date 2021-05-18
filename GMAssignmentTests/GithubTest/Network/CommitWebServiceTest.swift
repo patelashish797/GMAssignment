@@ -13,7 +13,6 @@ class CommitWebServiceTest: XCTestCase {
     var sut: CommitWebService!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         let config = URLSessionConfiguration.ephemeral
         config.protocolClasses = [MockURLProtocol.self]
         let urlSession = URLSession(configuration: config)
@@ -21,7 +20,6 @@ class CommitWebServiceTest: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         sut = nil
         MockURLProtocol.stubResponseData = nil
         MockURLProtocol.error = nil
@@ -34,7 +32,7 @@ class CommitWebServiceTest: XCTestCase {
             fatalError("GithubCommits.json not found")
         }
         guard let jsonString = try? String(contentsOfFile: pathString, encoding: .utf8) else {
-            fatalError("Unable to convert UnitTestData.json to String")
+            fatalError("Unable to convert GithubCommits.json to String")
         }
         MockURLProtocol.stubResponseData = jsonString.data(using: .utf8)
         

@@ -23,9 +23,8 @@ class MockURLProtocol: URLProtocol {
     
     override func startLoading() {
  
-        if let signupError = MockURLProtocol.error {
-            self.client?.urlProtocol(self, didFailWithError: signupError)
-            print("check \(signupError)")
+        if let error = MockURLProtocol.error {
+            self.client?.urlProtocol(self, didFailWithError: error)
         } else {
             self.client?.urlProtocol(self, didLoad: MockURLProtocol.stubResponseData!)
         }
