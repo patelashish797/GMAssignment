@@ -1,0 +1,81 @@
+[
+    {
+        "sha": "4886bd56e45747a75228cf5c760d765457e572d3",
+        "node_id": "MDY6Q29tbWl0NDQ4Mzg5NDk6NDg4NmJkNTZlNDU3NDdhNzUyMjhjZjVjNzYwZDc2NTQ1N2U1NzJkMw==",
+        "commit": {
+            "author": {
+                "name": "Philippe Hausler",
+                "email": "phausler@apple.com",
+                "date": "2021-05-12T04:41:33Z"
+            },
+            "committer": {
+                "name": "GitHub",
+                "email": "noreply@github.com",
+                "date": "2021-05-12T04:41:33Z"
+            },
+            "message": "[Concurrency] AsyncStream and AsyncThrowingStream \n\n* Rework YieldingContinuation to service values in a buffered fashion\r\n\r\n* Fix word size calculation for locks\r\n\r\n* Handle terminal states and finished/failed storage\r\n\r\n* Wrap yielding continuation into a more featureful type for better ergonomics\r\n\r\n* Hope springs eternal, maybe windows works with this?\r\n\r\n* Prevent value overflows at .max limits\r\n\r\n* Add a cancellation handler\r\n\r\n* Fix series tests missing continuation parameters\r\n\r\n* Fix series tests for mutable itertaors\r\n\r\n* Rename to a more general name for Series's inner continuation type\r\n\r\n* Whitespace fixes and add more commentary about public functions on Series\r\n\r\n* Restore YieldingContinuation for now with deprecations to favor Series\r\n\r\n* Ensure onCancel is invoked in deinit phases, and eliminate a potential for double cancellation\r\n\r\n* Make sure ThrowingSeries has the same nonmutating setter for onCancel as Series\r\n\r\n* Add a swath of more unit tests that exersize cancellation behavior as well as throwing behaviors\r\n\r\n* Remove work-around for async testing\r\n\r\n* Fixup do/catch range to properly handle ThrowingSeries test\r\n\r\n* Address naming consistency of resume result function\r\n\r\n* Adopt the async main test setup\r\n\r\n* More migration of tests to new async mechanisms\r\n\r\n* Handle the double finish/throw case\r\n\r\n* Ensure the dependency on Dispatch is built for the series tests (due to semaphore usage)\r\n\r\n* Add import-libdispatch to run command for Series tests\r\n\r\n* Use non-combine based timeout intervals (portable to linux) for dispatch semaphore\r\n\r\n* Rename Series -> AsyncStream and resume functions to just yield, and correct a missing default Element.self value\r\n\r\n* Fix missing naming change issue for yielding an error on AsyncThrowingStream\r\n\r\n* Remove argument label of buffering from tests\r\n\r\n* Extract buffer and throwing variants into their own file\r\n\r\n* Slightly refactor for only needing to store the producer instead of producer and cancel\r\n\r\n* Rename onCancel to onTermination\r\n\r\n* Convert handler access into a function pair\r\n\r\n* Add finished states to the termination handler event pipeline and a disambiguation enum to identify finish versus cancel\r\n\r\n* Ensure all termination happens before event propigation (and outside of the locks) and warn against requirements for locking on terminate and enqueue\r\n\r\n* Modified to use Deque to back the storage and move the storage to inner types; overall perf went from 200kE/sec to over 1ME/sec\r\n\r\n* Update stdlib/public/Concurrency/AsyncStream.swift\r\n\r\nCo-authored-by: Doug Gregor <dgregor@apple.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncThrowingStream.swift\r\n\r\nCo-authored-by: Doug Gregor <dgregor@apple.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncThrowingStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncThrowingStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncThrowingStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncThrowingStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Remove local cruft for overlay disabling\r\n\r\n* Remove local cruft for Dispatch overlay work\r\n\r\n* Remove potential ABI impact for adding Deque\r\n\r\nCo-authored-by: Doug Gregor <dgregor@apple.com>\r\nCo-authored-by: Joseph Heck <heckj@mac.com>",
+            "tree": {
+                "sha": "95a28b8179409b1992651dfbe98ff387e83cd7b8",
+                "url": "https://api.github.com/repos/apple/swift/git/trees/95a28b8179409b1992651dfbe98ff387e83cd7b8"
+            },
+            "url": "https://api.github.com/repos/apple/swift/git/commits/4886bd56e45747a75228cf5c760d765457e572d3",
+            "comment_count": 0,
+            "verification": {
+                "verified": true,
+                "reason": "valid",
+                "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJgm1x9CRBK7hj4Ov3rIwAAQLMIALIXVB2bzQWZdH0Dc0iGT/iH\n/PN+0wRh9IZLGO99jXrYHlpm7GP/AcoonkDvvhme1YwzU6Rz+OMaZF9XHhxQFQ+o\nh1TjRo7ChVDcG5dUBl4jEx90vqK+1p9IonFcWWWuMMXxoFZl4jib7WLCClbbveZN\nSASqW/38jvHeMcXMQEXtZxVQw+a+BDNSWwbyh8cH1jx6YvdOxMiw49eVGJGUHzFu\nEcLrOdYSl+sBtpq8u1FUFLsyPzZ3D3Urm+jzDXFXl1EXQIxstIILMmjUhfnZd65u\nQhhy+Zxe1qnYVP2aKljanySIIcOz1n0uI6DiRqN1jR/tM50DJOwwmm/cki9aT3s=\n=8zQT\n-----END PGP SIGNATURE-----\n",
+                "payload": "tree 95a28b8179409b1992651dfbe98ff387e83cd7b8\nparent 93eae81b0485507ea982440cc6968a4d94252999\nauthor Philippe Hausler <phausler@apple.com> 1620794493 -0700\ncommitter GitHub <noreply@github.com> 1620794493 -0700\n\n[Concurrency] AsyncStream and AsyncThrowingStream \n\n* Rework YieldingContinuation to service values in a buffered fashion\r\n\r\n* Fix word size calculation for locks\r\n\r\n* Handle terminal states and finished/failed storage\r\n\r\n* Wrap yielding continuation into a more featureful type for better ergonomics\r\n\r\n* Hope springs eternal, maybe windows works with this?\r\n\r\n* Prevent value overflows at .max limits\r\n\r\n* Add a cancellation handler\r\n\r\n* Fix series tests missing continuation parameters\r\n\r\n* Fix series tests for mutable itertaors\r\n\r\n* Rename to a more general name for Series's inner continuation type\r\n\r\n* Whitespace fixes and add more commentary about public functions on Series\r\n\r\n* Restore YieldingContinuation for now with deprecations to favor Series\r\n\r\n* Ensure onCancel is invoked in deinit phases, and eliminate a potential for double cancellation\r\n\r\n* Make sure ThrowingSeries has the same nonmutating setter for onCancel as Series\r\n\r\n* Add a swath of more unit tests that exersize cancellation behavior as well as throwing behaviors\r\n\r\n* Remove work-around for async testing\r\n\r\n* Fixup do/catch range to properly handle ThrowingSeries test\r\n\r\n* Address naming consistency of resume result function\r\n\r\n* Adopt the async main test setup\r\n\r\n* More migration of tests to new async mechanisms\r\n\r\n* Handle the double finish/throw case\r\n\r\n* Ensure the dependency on Dispatch is built for the series tests (due to semaphore usage)\r\n\r\n* Add import-libdispatch to run command for Series tests\r\n\r\n* Use non-combine based timeout intervals (portable to linux) for dispatch semaphore\r\n\r\n* Rename Series -> AsyncStream and resume functions to just yield, and correct a missing default Element.self value\r\n\r\n* Fix missing naming change issue for yielding an error on AsyncThrowingStream\r\n\r\n* Remove argument label of buffering from tests\r\n\r\n* Extract buffer and throwing variants into their own file\r\n\r\n* Slightly refactor for only needing to store the producer instead of producer and cancel\r\n\r\n* Rename onCancel to onTermination\r\n\r\n* Convert handler access into a function pair\r\n\r\n* Add finished states to the termination handler event pipeline and a disambiguation enum to identify finish versus cancel\r\n\r\n* Ensure all termination happens before event propigation (and outside of the locks) and warn against requirements for locking on terminate and enqueue\r\n\r\n* Modified to use Deque to back the storage and move the storage to inner types; overall perf went from 200kE/sec to over 1ME/sec\r\n\r\n* Update stdlib/public/Concurrency/AsyncStream.swift\r\n\r\nCo-authored-by: Doug Gregor <dgregor@apple.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncThrowingStream.swift\r\n\r\nCo-authored-by: Doug Gregor <dgregor@apple.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncThrowingStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncThrowingStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncThrowingStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Update stdlib/public/Concurrency/AsyncThrowingStream.swift\r\n\r\nCo-authored-by: Joseph Heck <heckj@mac.com>\r\n\r\n* Remove local cruft for overlay disabling\r\n\r\n* Remove local cruft for Dispatch overlay work\r\n\r\n* Remove potential ABI impact for adding Deque\r\n\r\nCo-authored-by: Doug Gregor <dgregor@apple.com>\r\nCo-authored-by: Joseph Heck <heckj@mac.com>"
+            }
+        },
+        "url": "https://api.github.com/repos/apple/swift/commits/4886bd56e45747a75228cf5c760d765457e572d3",
+        "html_url": "https://github.com/apple/swift/commit/4886bd56e45747a75228cf5c760d765457e572d3",
+        "comments_url": "https://api.github.com/repos/apple/swift/commits/4886bd56e45747a75228cf5c760d765457e572d3/comments",
+        "author": {
+            "login": "phausler",
+            "id": 278470,
+            "node_id": "MDQ6VXNlcjI3ODQ3MA==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/278470?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/phausler",
+            "html_url": "https://github.com/phausler",
+            "followers_url": "https://api.github.com/users/phausler/followers",
+            "following_url": "https://api.github.com/users/phausler/following{/other_user}",
+            "gists_url": "https://api.github.com/users/phausler/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/phausler/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/phausler/subscriptions",
+            "organizations_url": "https://api.github.com/users/phausler/orgs",
+            "repos_url": "https://api.github.com/users/phausler/repos",
+            "events_url": "https://api.github.com/users/phausler/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/phausler/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "93eae81b0485507ea982440cc6968a4d94252999",
+                "url": "https://api.github.com/repos/apple/swift/commits/93eae81b0485507ea982440cc6968a4d94252999",
+                "html_url": "https://github.com/apple/swift/commit/93eae81b0485507ea982440cc6968a4d94252999"
+            }
+        ]
+    },
+]
