@@ -13,12 +13,11 @@ protocol CommitViewModelDelegate: class {
 }
 
 class CommitViewModel {
-    private weak var delegate: CommitViewModelDelegate?
     private var service: CommitWebService?
+    weak var delegate: CommitViewModelDelegate?
     var commits: [CommitList] = []
     
-    init(delegate: CommitViewModelDelegate,  service: CommitWebService) {
-        self.delegate = delegate
+    init(service: CommitWebService) {
         self.service = service
     }
     

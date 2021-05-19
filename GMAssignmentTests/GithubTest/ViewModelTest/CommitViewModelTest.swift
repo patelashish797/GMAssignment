@@ -19,8 +19,8 @@ class CommitViewModelTest: XCTestCase, CommitViewModelDelegate{
         let urlSession = URLSession(configuration: config)
         let commitWebService = CommitWebService(urlString: "https://api.github.com/repos/apple/swift/commits",
                                                 urlSession: urlSession)
-        sut = CommitViewModel(delegate: self, service: commitWebService)
-
+        sut = CommitViewModel(service: commitWebService)
+        sut.delegate = self
     }
     
     override func tearDownWithError() throws {

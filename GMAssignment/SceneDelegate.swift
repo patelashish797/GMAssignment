@@ -19,8 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        let viewController = ViewController()
-        let navigationViewController = UINavigationController(rootViewController: viewController)
+        let service = CommitWebService(urlString: "https://api.github.com/repos/apple/swift/commits")
+        let viewModel = CommitViewModel(service: service)
+        let commitVC = CommitViewController(viewModel: viewModel)
+        viewModel.delegate = commitVC
+        let navigationViewController = UINavigationController(rootViewController: commitVC)
         window?.windowScene = windowScene
         window?.rootViewController = navigationViewController
         window?.makeKeyAndVisible()

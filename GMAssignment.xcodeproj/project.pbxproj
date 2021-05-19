@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8467174A2653618000CD66C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717492653618000CD66C1 /* AppDelegate.swift */; };
 		8467174C2653618000CD66C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467174B2653618000CD66C1 /* SceneDelegate.swift */; };
-		8467174E2653618000CD66C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467174D2653618000CD66C1 /* ViewController.swift */; };
+		8467174E2653618000CD66C1 /* CommitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467174D2653618000CD66C1 /* CommitViewController.swift */; };
 		846717532653618200CD66C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846717522653618200CD66C1 /* Assets.xcassets */; };
 		846717562653618200CD66C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846717542653618200CD66C1 /* LaunchScreen.storyboard */; };
 		8467176C2653618300CD66C1 /* GMAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467176B2653618300CD66C1 /* GMAssignmentUITests.swift */; };
@@ -21,6 +21,10 @@
 		846717B92653845E00CD66C1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717B82653845E00CD66C1 /* APIError.swift */; };
 		846717BF2654222F00CD66C1 /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717BE2654222E00CD66C1 /* CommitViewModel.swift */; };
 		846717C9265432BE00CD66C1 /* CommitViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717C8265432BE00CD66C1 /* CommitViewModelTest.swift */; };
+		846717D72654523F00CD66C1 /* CommitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717D62654523F00CD66C1 /* CommitCell.swift */; };
+		846717E62654746600CD66C1 /* CommitCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717E52654746600CD66C1 /* CommitCellTest.swift */; };
+		846717EF26547F1200CD66C1 /* CommitViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717EE26547F1200CD66C1 /* CommitViewControllerTest.swift */; };
+		846717F52654C00600CD66C1 /* AlertDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717F42654C00600CD66C1 /* AlertDisplayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +48,7 @@
 		846717462653618000CD66C1 /* GMAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846717492653618000CD66C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8467174B2653618000CD66C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8467174D2653618000CD66C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8467174D2653618000CD66C1 /* CommitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitViewController.swift; sourceTree = "<group>"; };
 		846717522653618200CD66C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846717552653618200CD66C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846717572653618200CD66C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +65,10 @@
 		846717B82653845E00CD66C1 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		846717BE2654222E00CD66C1 /* CommitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitViewModel.swift; sourceTree = "<group>"; };
 		846717C8265432BE00CD66C1 /* CommitViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitViewModelTest.swift; sourceTree = "<group>"; };
+		846717D62654523F00CD66C1 /* CommitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCell.swift; sourceTree = "<group>"; };
+		846717E52654746600CD66C1 /* CommitCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCellTest.swift; sourceTree = "<group>"; };
+		846717EE26547F1200CD66C1 /* CommitViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitViewControllerTest.swift; sourceTree = "<group>"; };
+		846717F42654C00600CD66C1 /* AlertDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +119,10 @@
 		846717482653618000CD66C1 /* GMAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				846717F32654BF4800CD66C1 /* Extension */,
 				846717822653685A00CD66C1 /* Github */,
 				846717492653618000CD66C1 /* AppDelegate.swift */,
 				8467174B2653618000CD66C1 /* SceneDelegate.swift */,
-				8467174D2653618000CD66C1 /* ViewController.swift */,
 				846717522653618200CD66C1 /* Assets.xcassets */,
 				846717542653618200CD66C1 /* LaunchScreen.storyboard */,
 				846717572653618200CD66C1 /* Info.plist */,
@@ -143,7 +151,8 @@
 		846717822653685A00CD66C1 /* Github */ = {
 			isa = PBXGroup;
 			children = (
-				846717D42654516300CD66C1 /* New Group */,
+				846717D52654520400CD66C1 /* Controller */,
+				846717D42654516300CD66C1 /* View */,
 				846717BD2654220A00CD66C1 /* ViewModel */,
 				846717AC265383F300CD66C1 /* Models */,
 				8467178F2653735D00CD66C1 /* Network */,
@@ -159,12 +168,12 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		846717902653739100CD66C1 /* Network */ = {
+		846717902653739100CD66C1 /* NetworkTest */ = {
 			isa = PBXGroup;
 			children = (
 				84671791265373BA00CD66C1 /* CommitWebServiceTest.swift */,
 			);
-			path = Network;
+			path = NetworkTest;
 			sourceTree = "<group>";
 		};
 		846717992653741E00CD66C1 /* Mocks */ = {
@@ -203,8 +212,10 @@
 		846717C62654327700CD66C1 /* GithubTest */ = {
 			isa = PBXGroup;
 			children = (
+				846717EA26547EED00CD66C1 /* Controller */,
+				846717E12654744D00CD66C1 /* ViewTest */,
 				846717C72654329900CD66C1 /* ViewModelTest */,
-				846717902653739100CD66C1 /* Network */,
+				846717902653739100CD66C1 /* NetworkTest */,
 				846717992653741E00CD66C1 /* Mocks */,
 				846717AA265383B300CD66C1 /* Json */,
 			);
@@ -219,11 +230,44 @@
 			path = ViewModelTest;
 			sourceTree = "<group>";
 		};
-		846717D42654516300CD66C1 /* New Group */ = {
+		846717D42654516300CD66C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				846717D62654523F00CD66C1 /* CommitCell.swift */,
 			);
-			path = "New Group";
+			path = View;
+			sourceTree = "<group>";
+		};
+		846717D52654520400CD66C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8467174D2653618000CD66C1 /* CommitViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		846717E12654744D00CD66C1 /* ViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				846717E52654746600CD66C1 /* CommitCellTest.swift */,
+			);
+			path = ViewTest;
+			sourceTree = "<group>";
+		};
+		846717EA26547EED00CD66C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				846717EE26547F1200CD66C1 /* CommitViewControllerTest.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		846717F32654BF4800CD66C1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				846717F42654C00600CD66C1 /* AlertDisplayer.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,11 +400,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8467174E2653618000CD66C1 /* ViewController.swift in Sources */,
+				8467174E2653618000CD66C1 /* CommitViewController.swift in Sources */,
 				8467178B26536E0900CD66C1 /* CommitWebService.swift in Sources */,
 				8467174A2653618000CD66C1 /* AppDelegate.swift in Sources */,
 				846717AE2653841C00CD66C1 /* CommitModel.swift in Sources */,
+				846717D72654523F00CD66C1 /* CommitCell.swift in Sources */,
 				8467174C2653618000CD66C1 /* SceneDelegate.swift in Sources */,
+				846717F52654C00600CD66C1 /* AlertDisplayer.swift in Sources */,
 				846717BF2654222F00CD66C1 /* CommitViewModel.swift in Sources */,
 				846717B92653845E00CD66C1 /* APIError.swift in Sources */,
 			);
@@ -370,6 +416,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846717EF26547F1200CD66C1 /* CommitViewControllerTest.swift in Sources */,
+				846717E62654746600CD66C1 /* CommitCellTest.swift in Sources */,
 				8467179B2653743700CD66C1 /* MockURLProtocol.swift in Sources */,
 				846717C9265432BE00CD66C1 /* CommitViewModelTest.swift in Sources */,
 				84671792265373BA00CD66C1 /* CommitWebServiceTest.swift in Sources */,
